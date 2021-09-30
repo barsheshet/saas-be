@@ -15,17 +15,24 @@
     "eslint:fix": "eslint --fix 'src/**/*.ts'",
     "prettier": "prettier 'src/**/*.ts'",
     "prettier:fix": "prettier --write 'src/**/*.ts'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "entity:create": "npx typeorm entity:create -n",
+    "migrations:generate": "npm run build:ts && npx typeorm migration:generate -p -n"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sinclair/typebox": "^0.20.5",
     "fastify": "^3.0.0",
     "fastify-autoload": "^3.3.1",
     "fastify-cli": "^2.13.0",
     "fastify-plugin": "^3.0.0",
-    "fastify-sensible": "^3.1.0"
+    "fastify-sensible": "^3.1.0",
+    "fastify-swagger": "^4.11.0",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.37"
   },
   "devDependencies": {
     "@types/node": "^15.0.0",
