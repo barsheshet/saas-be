@@ -62,7 +62,7 @@ export const GetListingsQuery = Type.Object(
 
 export const ListingsDto = Type.Object({
   listings: Type.Array(ListingDto),
-  cursor: Type.Union([Type.String(),Type.Null()])
+  cursor: Type.Union([Type.String(), Type.Null()]),
 });
 
 export const ListingParams = Type.Object({
